@@ -1,0 +1,16 @@
+class Solution {
+    public int[] getNoZeroIntegers(int n) {
+        //map<Integer, Integer> resultHash= new HashMap<>();
+        for (int i=1; i<n; ++i){
+            int complement=n-i;
+            
+        if (
+                !String.valueOf(i).contains("0") &&
+                !String.valueOf(complement).contains("0")
+            ) {
+                return new int[] {i,complement};
+            }
+        }
+return new int[0];
+    }
+}
