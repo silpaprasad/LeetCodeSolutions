@@ -14,3 +14,43 @@ class Solution {
 return new int[0];
     }
 }
+
+
+//return all key value pairs
+/*
+import java.util.*;
+
+class Solution {
+    public int[][] getNoZeroIntegers(int n) {
+        Map<Integer, Integer> resultHash = new HashMap<>();
+
+        // Build all key-value pairs
+        for (int i = 1; i < n; ++i) {
+            int complement = n - i;
+            resultHash.put(i, complement);
+        }
+
+        // Convert map entries into a 2D array
+        int[][] result = new int[resultHash.size()][2];
+        int index = 0;
+        for (Map.Entry<Integer, Integer> entry : resultHash.entrySet()) {
+            result[index][0] = entry.getKey();   // key
+            result[index][1] = entry.getValue(); // value
+            index++;
+        }
+
+        return result;
+    }
+
+    // For quick testing
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        int[][] pairs = sol.getNoZeroIntegers(5);
+
+        for (int[] pair : pairs) {
+            System.out.println(pair[0] + " , " + pair[1]);
+        }
+    }
+}
+
+*/
