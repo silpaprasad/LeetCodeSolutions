@@ -1,3 +1,4 @@
+//with 1 ms execution time
 class Solution {
     public int[] getNoZeroIntegers(int n) {
         //map<Integer, Integer> resultHash= new HashMap<>();
